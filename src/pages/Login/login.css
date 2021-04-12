@@ -1,0 +1,86 @@
+.loginPage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2A2626;
+}
+.loginPage .forget {
+  margin-left: 70vw;
+  margin-top: 6vh;
+  font-size: 5vw;
+}
+.loginPage .loginBox .logintext {
+  font-size: 8vw;
+  font-weight: 600;
+  color: #9C8FAE;
+  margin-top: 6vh;
+  margin-left: 4vw;
+}
+.loginPage .loginBox .user {
+  color: #9C8FAE;
+  font-weight: 600;
+  font-size: 5vw;
+  margin-left: 4vw;
+  margin-top: 5vh;
+}
+.loginPage .loginBox .user input {
+  margin-top: 3vh;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  border-bottom: #9E9B9B solid 2px;
+  width: 90vw;
+  height: 2em;
+  font-size: 4vw;
+  color: #635D5D;
+}
+.loginPage .loginBox .pasw {
+  color: #9C8FAE;
+  font-weight: 600;
+  font-size: 5vw;
+  margin-left: 4vw;
+  margin-top: 5vh;
+}
+.loginPage .loginBox .pasw input {
+  margin-top: 3vh;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  border-bottom: #9E9B9B solid 2px;
+  width: 90vw;
+  height: 2em;
+  font-size: 4vw;
+  color: #635D5D;
+}
+.loginPage .loginBox .pasw .showPass {
+  margin-left: 65vw;
+}
+.loginPage .loginBox .protocol {
+  color: #AFADAD;
+  font-size: 3vw;
+  text-align: center;
+  margin: 5vh auto;
+}
+.loginPage .loginBox .protocol .protocolText {
+  color: #9C8FAE;
+}
+.loginPage .loginBox .loginBtn {
+  width: 30vw;
+  height: 10vw;
+  text-align: center;
+  line-height: 10vw;
+  border: #AFADAD solid 1px;
+  border-radius: 20px;
+  color: #9C8FAE;
+  font-size: 5vw;
+  margin: 0 auto;
+}
+.loginPage .otherLogin {
+  margin-top: 10vh;
+}
+.forget {
+  color: #9C8FAE;
+}
