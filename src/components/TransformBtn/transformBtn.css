@@ -1,0 +1,146 @@
+.loginBtn {
+  width: 35vw;
+  height: 15vw ;
+  text-align: center;
+  line-height: 15vw;
+  border: #AFADAD solid 1px;
+  border-radius: 5rem;
+  color: #9C8FAE;
+  font-size: 1.33rem;
+  margin: 0 auto;
+}
+.loginBtn svg {
+  display: none;
+}
+.loding {
+  width: 35vw;
+  height: 15vw ;
+  text-align: center;
+  line-height: 15vw;
+  border: #AFADAD solid 1px;
+  border-radius: 5rem;
+  color: #9C8FAE;
+  font-size: 1.33rem;
+  margin: 0 auto;
+  transition: 0.4s;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.loding svg {
+  display: none;
+}
+.loding span {
+  height: 1.2vw;
+  width: 1.2vw;
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.loding .d1 {
+  animation: updown 1s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.loding .d2 {
+  animation: updown 1s 0.3s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.loding .d3 {
+  animation: updown 1s 0.6s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.loding svg {
+  display: none;
+}
+.success {
+  width: 35vw;
+  height: 15vw ;
+  text-align: center;
+  line-height: 15vw;
+  border: #AFADAD solid 1px;
+  border-radius: 5rem;
+  color: #9C8FAE;
+  font-size: 1.33rem;
+  margin: 0 auto;
+  transition: 0.4s;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.success svg {
+  display: none;
+}
+.success span {
+  height: 1.2vw;
+  width: 1.2vw;
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.success .d1 {
+  animation: updown 1s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.success .d2 {
+  animation: updown 1s 0.3s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.success .d3 {
+  animation: updown 1s 0.6s alternate infinite;
+  transform: translateY(1.5vw);
+}
+.success svg {
+  display: none;
+}
+.success span {
+  transition: 0.3s;
+  opacity: 0;
+}
+.success svg {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-6%, 40%);
+  animation: tick 0.6s ease-in forwards;
+}
+.success svg polyline {
+  stroke-width: 5px;
+}
+.end {
+  transition: 1s;
+  background-color: #A496B8;
+  width: 23rem;
+  height: 9rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-top: 8vh;
+  transform: translateY(-54vh);
+  font-size: 4rem;
+  text-align: center;
+  line-height: 9rem;
+}
+.end svg {
+  display: none;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(1.5vw);
+  }
+  100% {
+    transform: translateY(-1.5vw);
+  }
+}
+@keyframes tick {
+  0% {
+    stroke-dasharray: 0, 40;
+  }
+  100% {
+    stroke-dasharray: 40, 0;
+  }
+}

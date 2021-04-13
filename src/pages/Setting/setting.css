@@ -1,0 +1,41 @@
+.setBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #A496B8;
+  z-index: -99;
+}
+.back {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 3vw;
+  margin-top: 2vh;
+  background-color: #EFEEEE;
+}
+.info {
+  width: 100vw;
+  height: 15vh;
+  background-color: #EFEEEE;
+  margin-top: 10vh;
+  border-radius: 1.5rem;
+}
+.moreInfo {
+  width: 100vw;
+  height: 40vh;
+  background-color: #EFEEEE;
+  margin-top: 12vh;
+  border-radius: 1.5rem;
+}
+.logout {
+  width: 30vw;
+  height: 10vw;
+  text-align: center;
+  line-height: 10vw;
+  border: #EFEEEE solid 1px;
+  border-radius: 20px;
+  color: #EFEEEE;
+  font-size: 1.33rem;
+  margin: 5vh auto;
+}

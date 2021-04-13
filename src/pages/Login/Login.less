@@ -6,27 +6,31 @@
 
 
 // 登录页背景
-.loginPage{
+.bg{
   position: fixed;
   left: 0;
   top: 0;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: @bgColor;
+  z-index: -99;
+}
+
+// 登录页盒子
+.loginPage{
 
   // 忘记密码
   .forget{
     margin-left: 70vw;
     margin-top: 6vh;
-    font-size: 5vw;
+    font-size: 1.3rem;
   }
   
   // 登录盒子
   .loginBox{
     //  "登录"文字
     .logintext{
-      font-size: 8vw;
+      font-size: 2.77rem;
       font-weight: 600;
       color: @themeColor;
       margin-top: 6vh;
@@ -36,7 +40,7 @@
     .user{
       color: @themeColor;
       font-weight: 600;
-      font-size: 5vw;
+      font-size: 1.5rem;
       margin-left: 4vw;
       margin-top: 5vh;
 
@@ -46,11 +50,11 @@
         border: 0;
         outline: none;
         background-color: transparent;
-        border-bottom: #9E9B9B solid 2px;
+        border-bottom: #797676 solid 2px;
         width: 90vw;
-        height: 2em;
-        font-size: 4vw;
-        color: @themeColorLight;
+        height: 2.6rem;
+        font-size: 1.4rem;
+        color: @themeColor;
       }
     }
     .pasw{
@@ -60,10 +64,27 @@
         margin-left: 65vw;
       }
     }
+
+    // 下划线动效
+    .underline{
+      position: absolute;
+      
+      display: block;
+      width: 90vw;
+      height: 2px;
+      transform: scaleX(0) ;
+      transition: all .3s ease-in;
+    }
+    input:focus ~ .underline{
+      transform: scaleX(1) translateY(-2px);
+      background-color: #fff;
+    }
+
+
     // 用户协议
     .protocol{
       color: #AFADAD;
-      font-size: 3vw;
+      font-size: 1rem;
       text-align: center;
       margin: 5vh auto;
       .protocolText{
@@ -71,24 +92,48 @@
       }
     }
     // 登录按钮
-    .loginBtn{
-      width: 30vw;
-      height: 10vw;
-      text-align: center;
-      line-height: 10vw;
-      border: #AFADAD solid 1px;
-      border-radius: 20px;
-      color: @themeColor;
-      font-size: 5vw;
-      margin: 0 auto;
-    }
+    // .loginBtn{
+    //   width: 30vw;
+    //   height: 10vw;
+    //   text-align: center;
+    //   line-height: 10vw;
+    //   border: #AFADAD solid 1px;
+    //   border-radius: 20px;
+    //   color: @themeColor;
+    //   font-size: 1.33rem;
+    //   margin: 0 auto;
+    // }
   }
   // 第三方登录
   .otherLogin{
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+
     margin-top: 10vh;
   }
 }
 
 .forget{
   color: @themeColor;
+}
+
+
+// 登录成功清场
+.fade{
+  animation: fadeOut 1s forwards;
+}
+
+
+
+// 动画
+// 淡出
+@keyframes fadeOut {
+  0%{
+    opacity: 0.99;
+  }
+  100%{
+    opacity: 0;
+  }
 }
