@@ -56,8 +56,8 @@ export default class Login extends Component {
     const { className } = this.state
     return (
       <div className="loginPage">
-        <div className={"bg" + " " + className}>
-        </div>
+        {/* <div className={"bg" + " " + className}>
+        </div> */}
         {/* 忘记密码 */}
         <div className={"forget" + " " + className}>忘记密码</div>
 
@@ -103,7 +103,14 @@ export default class Login extends Component {
 
         {/* 第三方登录 */}
         <div className={"otherLogin" + " " + className}>
-          <img src="assets/otherLogin.png" alt="" />
+          <div>
+            <label></label>
+            <span> 第 三 方 账 号 登 录 </span>
+            <label></label>
+          </div>
+          <div className="qq"></div>
+          <div className="wechat"></div>
+          {/* <img src="assets/otherLogin.png" alt="" /> */}
         </div>
       </div>
     )

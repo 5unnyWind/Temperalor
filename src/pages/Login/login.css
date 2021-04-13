@@ -1,12 +1,3 @@
-.bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #2A2626;
-  z-index: -99;
-}
 .loginPage .forget {
   margin-left: 70vw;
   margin-top: 6vh;
@@ -80,11 +71,37 @@
   color: #9C8FAE;
 }
 .loginPage .otherLogin {
+  text-align: center;
   margin-top: 10vh;
 }
-.loginPage .otherLogin img {
-  display: block;
+.loginPage .otherLogin label {
+  width: 26vw;
+  height: 2px;
+  display: inline-block;
+  background-color: #635D5D;
+}
+.loginPage .otherLogin span {
+  color: #9C8FAE;
+  position: relative;
+  top: 3px;
+}
+.loginPage .otherLogin .qq {
+  background-image: url(../../assets/sprite.png);
+  background-position: -6px -90px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto;
+  transform: scale(0.6);
+  display: inline-block;
+}
+.loginPage .otherLogin .wechat {
+  background-image: url(../../assets/sprite.png);
+  background-position: -92px -90px;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  transform: scale(0.6);
+  display: inline-block;
 }
 .forget {
   color: #9C8FAE;

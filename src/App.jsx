@@ -5,11 +5,14 @@ import Home from './pages/Home/Home'
 import Setting from './pages/Setting/Setting'
 import Encounter from './pages/Encounter/Encounter'
 import Make from './pages/Make/Make'
+import BG from './components/BG/BG'
 
 export default class App extends Component {
   render() {
     return (
       <div>
+        <BG />
+
         {/* 单一匹配，提高路由效率 */}
         <Switch>
         <Route path="/login" component={Login} />

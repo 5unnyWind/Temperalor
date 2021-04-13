@@ -1,0 +1,45 @@
+// 全局背景
+.BG{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  // 底部衬色
+  .baseColor{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #9C8FAE;
+    z-index: -98;
+  }
+  img{
+    // 2550*3300
+    // 以中心缩小
+    transform: scale(.5) translate(-1300px,-1700px);
+    animation: bgmove 60s infinite alternate linear;
+  }
+}
+
+// 背景动效
+@keyframes bgmove {
+  0%{
+    transform: scale(.5) translate(-1300px,-1700px);
+    opacity: .8;
+  }
+  25%{
+    transform: scale(.5) translate(-3000px,-3300px);
+    opacity: .4;
+  }
+  50%{
+    transform: scale(.5) translate(-1300px,-3300px);
+    opacity: .9;
+  }
+  100%{
+    transform: scale(.5) translate(-3000px,-1700px);
+    opacity: .5;
+  }
+}

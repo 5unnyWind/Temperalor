@@ -1,0 +1,39 @@
+.BG {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+.BG .baseColor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #9C8FAE;
+  z-index: -98;
+}
+.BG img {
+  transform: scale(0.5) translate(-1300px, -1700px);
+  animation: bgmove 60s infinite alternate linear;
+}
+@keyframes bgmove {
+  0% {
+    transform: scale(0.5) translate(-1300px, -1700px);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(0.5) translate(-3000px, -3300px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(0.5) translate(-1300px, -3300px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.5) translate(-3000px, -1700px);
+    opacity: 0.5;
+  }
+}

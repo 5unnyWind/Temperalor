@@ -6,15 +6,15 @@
 
 
 // 登录页背景
-.bg{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: @bgColor;
-  z-index: -99;
-}
+// .bg{
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: @bgColor;
+//   z-index: -99;
+// }
 
 // 登录页盒子
 .loginPage{
@@ -106,12 +106,45 @@
   }
   // 第三方登录
   .otherLogin{
-    img{
-      display: block;
-      margin: 0 auto;
-    }
-
+    text-align: center;
     margin-top: 10vh;
+
+    label{
+      width: 26vw;
+      height: 2px;
+      
+      display: inline-block;
+      background-color: @themeColorLight;
+    }
+    span{
+      color: @themeColor;
+      position: relative;
+      top: 3px;
+    }
+    .qq{
+      background-image: url(../../assets/sprite.png);
+      background-position: -6px -90px;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+      transform: scale(.6);
+      display: inline-block;
+    }
+    .wechat{
+      background-image: url(../../assets/sprite.png);
+      background-position: -92px -90px;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+      transform: scale(.6);
+      display: inline-block;
+      
+    }
+    // img{
+    //   display: block;
+    //   margin: 0 auto;
+    // }
+
   }
 }
 
