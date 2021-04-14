@@ -1,50 +1,62 @@
 // 背景色
 @bgcolor:#A496B8;
 // 主题色
-@themeColor:#EFEEEE;
+@themeColor:#A5A8D7;
 
 
 // 背景
-.setBg{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: @bgcolor;
-  z-index: -99;
-}
+// .setBg{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: @bgcolor;
+//   z-index: -99;
+// }
 
 
 
 // 返回按钮
 .back{
-  width: 4rem;
-  height: 4rem;
-  margin-left: 3vw;
-  margin-top: 2vh;
-  background-color: @themeColor;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  // background-color: @themeColor;
+  animation: fadeIn 1s forwards;
+  background-image: url(../../assets/sprite.png);
+  background-position: -655px -81px;
+  transform: scale(.9);
 }
 
 
 // 用户名/头像
 .info{
-  width: 100vw;
+  width: 90vw;
   height: 15vh;
   background-color:@themeColor ;
-  margin-top: 10vh;
+  margin: 0 auto;
+  margin-top: 6vh;
   border-radius: 1.5rem;
-
+  animation: fadeIn 1s forwards;
+  opacity: .6;
+  filter: blur(2px);
+  box-shadow: 0 10px 20px #000;
 }
 
 // 信息列表
 .moreInfo{
-  width: 100vw;
+  width: 90vw;
   height: 40vh;
   background-color:@themeColor ;
-  margin-top: 12vh;
+  margin: 0 auto;
+  margin-top: 10vh;
   border-radius: 1.5rem;
-}
+  animation: fadeIn 1s forwards;
+  opacity: .6;
+  box-shadow: 0 10px 20px #000;
+} 
 
 // 注销
 .logout{
@@ -57,4 +69,25 @@
   color: @themeColor;
   font-size: 1.33rem;
   margin: 5vh auto;
+  animation: fadeIn 1s forwards;
+
+}
+
+
+// 动画
+
+//淡入 
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  // 100%{
+  //   opacity: 1;
+  // }
+}
+// 淡出
+@keyframes fadeOut {
+  to{
+    opacity: 0;
+  }
 }

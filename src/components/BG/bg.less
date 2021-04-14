@@ -20,7 +20,13 @@
     // 2550*3300
     // 以中心缩小
     transform: scale(.5) translate(-1300px,-1700px);
-    animation: bgmove 60s infinite alternate linear;
+    animation: bgmove 100s infinite alternate linear;
+
+    // pc响应
+    @media screen and (min-width:900px) {
+      transform: scale(1) ;
+      animation: none;
+    }
   }
 }
 
@@ -32,7 +38,7 @@
   }
   25%{
     transform: scale(.5) translate(-3000px,-3300px);
-    opacity: .4;
+    opacity: .7;
   }
   50%{
     transform: scale(.5) translate(-1300px,-3300px);
@@ -40,6 +46,6 @@
   }
   100%{
     transform: scale(.5) translate(-3000px,-1700px);
-    opacity: .5;
+    opacity: .6;
   }
 }

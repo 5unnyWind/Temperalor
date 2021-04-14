@@ -114,16 +114,13 @@
 }
 .end {
   transition: 1s;
-  background-color: #A496B8;
-  width: 23rem;
-  height: 9rem;
-  border-radius: 2rem;
+  width: 90vw;
+  height: 90vw;
   margin: 0 auto;
-  margin-top: 8vh;
-  transform: translateY(-54vh);
-  font-size: 4rem;
-  text-align: center;
-  line-height: 9rem;
+  transform: translateY(-38.5vh);
+  border-radius: 1rem;
+  border: #9C8FAE 2px solid;
+  opacity: 0.5;
 }
 .end svg {
   display: none;

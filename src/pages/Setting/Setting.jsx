@@ -25,7 +25,7 @@ export default class Setting extends Component {
 
         {/* 用户名/头像 */}
         <div className="info">
-
+          
         </div>
 
         {/* 信息列表 */}

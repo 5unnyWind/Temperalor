@@ -1,41 +1,55 @@
-.setBg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #A496B8;
-  z-index: -99;
-}
 .back {
-  width: 4rem;
-  height: 4rem;
-  margin-left: 3vw;
-  margin-top: 2vh;
-  background-color: #EFEEEE;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  animation: fadeIn 1s forwards;
+  background-image: url(../../assets/sprite.png);
+  background-position: -655px -81px;
+  transform: scale(0.9);
 }
 .info {
-  width: 100vw;
+  width: 90vw;
   height: 15vh;
-  background-color: #EFEEEE;
-  margin-top: 10vh;
+  background-color: #A5A8D7;
+  margin: 0 auto;
+  margin-top: 6vh;
   border-radius: 1.5rem;
+  animation: fadeIn 1s forwards;
+  opacity: 0.6;
+  filter: blur(2px);
+  box-shadow: 0 10px 20px #000;
 }
 .moreInfo {
-  width: 100vw;
+  width: 90vw;
   height: 40vh;
-  background-color: #EFEEEE;
-  margin-top: 12vh;
+  background-color: #A5A8D7;
+  margin: 0 auto;
+  margin-top: 10vh;
   border-radius: 1.5rem;
+  animation: fadeIn 1s forwards;
+  opacity: 0.6;
+  box-shadow: 0 10px 20px #000;
 }
 .logout {
   width: 30vw;
   height: 10vw;
   text-align: center;
   line-height: 10vw;
-  border: #EFEEEE solid 1px;
+  border: #A5A8D7 solid 1px;
   border-radius: 20px;
-  color: #EFEEEE;
+  color: #A5A8D7;
   font-size: 1.33rem;
   margin: 5vh auto;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
