@@ -60,13 +60,15 @@ export default class Login extends Component {
         {/* <div className={"bg" + " " + className}>
         </div> */}
         {/* 忘记密码 */}
+        {/* eslint-disable-next-line */}
         <div className={"forget" + " " + className}>忘记密码</div>
 
         {/* 登录 */}
         <div className="loginBox">
           {/* "登录"文字 */}
+        {/* eslint-disable-next-line */}
           <p className={"logintext" + " " + className}>登录</p>
-
+        {/* eslint-disable-next-line */}
           <div className={"user" + " " + className}>
             <p>账号</p>
             <input
@@ -76,8 +78,9 @@ export default class Login extends Component {
             {/* 输入框动画用的下划线 */}
             <label className="underline" ></label>
           </div>
-
+        {/* eslint-disable-next-line */}
           <div className={"pasw" + " " + className}>
+            {/* eslint-disable-next-line */}
             <p><span>密码</span><span className={"showPass" + " " + className}>显示</span></p>
             <input
               type="password"
@@ -88,8 +91,10 @@ export default class Login extends Component {
           </div>
 
           {/* 用户协议 */}
+          {/* eslint-disable-next-line */}
           <div className={"protocol" + " " + className}>
             <p>注册/登录即表示已阅读并同意</p>
+            {/* eslint-disable-next-line */}
             <p className={"protocolText" + " " + className}>《用户协议与隐私政策》</p>
           </div>
 
@@ -103,6 +108,7 @@ export default class Login extends Component {
         </div>
 
         {/* 第三方登录 */}
+        {/* eslint-disable-next-line */}
         <div className={"otherLogin" + " " + className}>
           <div>
             <label></label>

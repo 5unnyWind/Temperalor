@@ -6,6 +6,7 @@ import Setting from './pages/Setting/Setting'
 import Encounter from './pages/Encounter/Encounter'
 import Make from './pages/Make/Make'
 import BG from './components/BG/BG'
+import Save from './pages/Save/Save'
 
 export default class App extends Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path="/setting" component={Setting} />
         <Route path="/encounter" component={Encounter} />
         <Route path="/make" component={Make} />
+        <Route path="/save" component={Save} />
         {/* 重定向 */}
         <Redirect to="/login"/>
         </Switch>

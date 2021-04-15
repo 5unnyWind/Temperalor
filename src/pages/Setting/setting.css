@@ -6,7 +6,16 @@
   animation: fadeIn 1s forwards;
   background-image: url(../../assets/sprite.png);
   background-position: -655px -81px;
-  transform: scale(0.9);
+  transform: scale(0.7);
+}
+.my {
+  background-image: url(../../assets/sprite.png);
+  background-position: -20px -280px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: -30px;
+  transform: scale(0.8);
 }
 .info {
   width: 90vw;
@@ -17,31 +26,37 @@
   border-radius: 1.5rem;
   animation: fadeIn 1s forwards;
   opacity: 0.6;
-  filter: blur(2px);
   box-shadow: 0 10px 20px #000;
+  text-align: center;
+  line-height: 7.5vh;
+  font-size: 2rem;
 }
 .moreInfo {
   width: 90vw;
   height: 40vh;
   background-color: #A5A8D7;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 7vh;
   border-radius: 1.5rem;
   animation: fadeIn 1s forwards;
   opacity: 0.6;
   box-shadow: 0 10px 20px #000;
+  list-style: none;
+  text-align: center;
+  line-height: 8vh;
+  font-size: 2rem;
 }
 .logout {
-  width: 30vw;
-  height: 10vw;
+  width: 168px;
+  height: 51px;
   text-align: center;
   line-height: 10vw;
-  border: #A5A8D7 solid 1px;
-  border-radius: 20px;
   color: #A5A8D7;
   font-size: 1.33rem;
   margin: 5vh auto;
   animation: fadeIn 1s forwards;
+  background-image: url(../../assets/sprite.png);
+  background-position: -546px -5px;
 }
 @keyframes fadeIn {
   0% {

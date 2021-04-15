@@ -1,0 +1,111 @@
+// 制作色卡海报页面
+.posterPage{
+  animation: fadeIn 1s forwards;
+}
+
+// 海报
+.poster{
+  background-color:#d3b89b;
+  width: 80vw;
+  height: 140vw;
+  border-radius: 1rem;
+  opacity: .9;
+  // position: absolute;
+  margin: 0 auto;
+  margin-top: 7vh;
+ .sekabox{
+  width: 60vw;
+  height: 80vw;
+  background-color: white;
+  opacity: 1;
+  margin: 0 auto; 
+  position: relative;
+  top: 15vw;
+  // 色号代码
+  .colorCode{
+    position: absolute;
+    right: 5vw;
+    top: 10vw;
+    font-size: large;
+    font-weight: 800;
+   }
+  //  色卡叠加
+   .seka{
+     width: 50vw;
+     height: 40vw;
+    //  background-color: #4D8DD5;
+     margin: 0 auto;
+     position: relative;
+    //  top: 30vw;
+    transform: translateY(30vw);
+    transition: 1s;
+    
+   }
+   .seka2{
+    width: 50vw;
+    height: 40vw;
+   //  background-color: #4D8DD5;
+    margin: 0 auto;
+    position: relative;
+    // top: -10vw;
+    transform: translateY(-10vw);
+   }
+   .seka3{
+    width: 50vw;
+    height: 40vw;
+   //  background-color: #4D8DD5;
+    margin: 0 auto;
+    position: relative;
+    // top: -50vw;
+    transform: translateY(-50vw);
+   }
+ }
+ .qrcode{
+   img{
+     width: 20vw;
+   }
+   position: relative;
+   top: 30vw;
+   left: 10vw;
+ }   
+}
+
+.rec{
+  background-image: url(../../assets/sprite.png);
+  background-position: -565px -176px;
+  // background-color: #628FB8;
+  width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 10vw;
+  opacity: .8;
+  
+}
+.save{
+  background-image: url(../../assets/sprite.png);
+  background-position: -565px -248px;
+  // background-color: #628FB8;
+  width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 5vw;
+  opacity: .8;
+}
+
+// 动画
+
+//淡入 
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  // 100%{
+  //   opacity: 1;
+  // }
+}
+// 淡出
+@keyframes fadeOut {
+  to{
+    opacity: 0;
+  }
+}

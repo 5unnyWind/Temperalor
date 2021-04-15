@@ -1,0 +1,86 @@
+.posterPage {
+  animation: fadeIn 1s forwards;
+}
+.poster {
+  background-color: #d3b89b;
+  width: 80vw;
+  height: 140vw;
+  border-radius: 1rem;
+  opacity: 0.9;
+  margin: 0 auto;
+  margin-top: 7vh;
+}
+.poster .sekabox {
+  width: 60vw;
+  height: 80vw;
+  background-color: white;
+  opacity: 1;
+  margin: 0 auto;
+  position: relative;
+  top: 15vw;
+}
+.poster .sekabox .colorCode {
+  position: absolute;
+  right: 5vw;
+  top: 10vw;
+  font-size: large;
+  font-weight: 800;
+}
+.poster .sekabox .seka {
+  width: 50vw;
+  height: 40vw;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(30vw);
+  transition: 1s;
+}
+.poster .sekabox .seka2 {
+  width: 50vw;
+  height: 40vw;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-10vw);
+}
+.poster .sekabox .seka3 {
+  width: 50vw;
+  height: 40vw;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50vw);
+}
+.poster .qrcode {
+  position: relative;
+  top: 30vw;
+  left: 10vw;
+}
+.poster .qrcode img {
+  width: 20vw;
+}
+.rec {
+  background-image: url(../../assets/sprite.png);
+  background-position: -565px -176px;
+  width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 10vw;
+  opacity: 0.8;
+}
+.save {
+  background-image: url(../../assets/sprite.png);
+  background-position: -565px -248px;
+  width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 5vw;
+  opacity: 0.8;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}

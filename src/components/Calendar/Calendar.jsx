@@ -24,7 +24,7 @@ function dayStart(month, year) {
 //计算某年是不是闰年，通过求年份除以4的余数即可
 function daysMonth(month, year) {
 	let tmp = year % 4;
-	if (tmp == 0) {
+	if (tmp === 0) {
 		return (month_olympic[month]);
 	} else {
 		return (month_normal[month]);
@@ -39,9 +39,9 @@ function refreshDate(){
 		str += "<li></li>"; //为起始日之前的日期创建空白节点
 	}
 	for(let i=1; i<=totalDay; i++){
-		if((i<my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()) || my_year<my_date.getFullYear() || ( my_year==my_date.getFullYear() && my_month<my_date.getMonth())){ 
+		if((i<my_day && my_year===my_date.getFullYear() && my_month===my_date.getMonth()) || my_year<my_date.getFullYear() || ( my_year===my_date.getFullYear() && my_month<my_date.getMonth())){ 
 			myclass = " class='lightgrey'"; //当该日期在今天之前时，以浅灰色字体显示
-		}else if (i==my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()){
+		}else if (i===my_day && my_year===my_date.getFullYear() && my_month===my_date.getMonth()){
 			myclass = " class='green greenbox'"; //当天日期以绿色背景突出显示
 		}else{
 			myclass = " class='darkgrey'"; //当该日期在今天之后时，以深灰字体显示
@@ -84,8 +84,8 @@ next.onclick = function(e){
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <h2 id="calendar-year">Year</h2>
             <div>
-              <a href="" id="prev">→</a>
-              <a href="" id="next">→</a>
+              <a href="{}" id="prev">→</a>
+              <a href="{}" id="next">→</a>
             </div>
 
           </div>
