@@ -1,5 +1,26 @@
 .posterPage {
   animation: fadeIn 1s forwards;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.backPoster {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  width: 80vw;
+  height: 140vw;
+  border-radius: 0.5rem;
+  opacity: 0;
+  margin: 0 auto;
+  margin-top: -65vh;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: rotateY(180deg);
+}
+#active {
+  transition: all 0.8s;
+  transform: rotateY(0);
+  opacity: 0.7;
 }
 .poster {
   background-color: #d3b89b;
@@ -10,6 +31,37 @@
   margin: 0 auto;
   margin-top: 7vh;
 }
+.poster .line1,
+.poster .line2 {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  width: 30vw;
+  position: relative;
+}
+.poster .line1 {
+  left: 35vw;
+  top: -4vw;
+}
+.poster .line2 {
+  left: 15vw;
+}
+.poster .logo {
+  width: 70px;
+  height: 70px;
+  background-image: url(../../assets/sprite.png);
+  background-position: -945px -20px;
+  transform: scale(0.6);
+  position: relative;
+  left: 60vw;
+}
+.poster .date {
+  font-size: 1.5rem;
+  position: relative;
+  left: 35vw;
+  top: 15vw;
+  color: #fff;
+}
 .poster .sekabox {
   width: 60vw;
   height: 80vw;
@@ -19,10 +71,17 @@
   position: relative;
   top: 15vw;
 }
+.poster .sekabox #todayTem {
+  position: absolute;
+  right: 5vw;
+  top: 7vw;
+  font-size: large;
+  font-weight: 800;
+}
 .poster .sekabox .colorCode {
   position: absolute;
   right: 5vw;
-  top: 10vw;
+  top: 14vw;
   font-size: large;
   font-weight: 800;
 }
@@ -56,6 +115,26 @@
 .poster .qrcode img {
   width: 20vw;
 }
+#story {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  left: 5vw;
+  top: 5vw;
+  font-size: 2.5rem;
+  width: 70vw;
+  height: 130vw;
+  background: linear-gradient(transparent 95%, rgba(255, 255, 255, 0.5) 0);
+  line-height: 1.5em;
+  background-size: 100% 1.5em;
+  background-attachment: local;
+}
+#story::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 .rec {
   background-image: url(../../assets/sprite.png);
   background-position: -565px -176px;
@@ -65,6 +144,11 @@
   margin-top: 10vw;
   opacity: 0.8;
 }
+#flip {
+  transition: all 0.8s;
+  transform: rotateY(180deg);
+  opacity: 0;
+}
 .save {
   background-image: url(../../assets/sprite.png);
   background-position: -565px -248px;
@@ -73,6 +157,78 @@
   margin: 0 auto;
   margin-top: 5vw;
   opacity: 0.8;
+}
+#fade1 {
+  opacity: 0;
+  transform: translateY(10vw);
+}
+#fade2 {
+  opacity: 0;
+  transform: translateY(-10vw);
+}
+.produce {
+  background-image: url(../../assets/sprite.png);
+  background-position: -731px -5px;
+  opacity: 0;
+}
+#apear {
+  width: 168px;
+  height: 51px;
+  margin: 0 auto;
+  position: relative;
+  top: 20vw;
+  opacity: 0.8;
+}
+#finalBack {
+  display: none;
+}
+#finalapear {
+  display: block;
+  margin: 0  auto;
+  position: relative;
+  top: -30vw;
+}
+#fade {
+  transition: all 0.6s;
+  opacity: 0;
+}
+#final .sekabox {
+  transform: scale(0.8) translateX(12vw) translateY(-10vw);
+}
+#final #storybox {
+  background: linear-gradient(to right top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  width: 65vw;
+  height: 35vw;
+  position: relative;
+  top: -85vw;
+  left: 2vw;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+#final .heart {
+  background-image: url(../../assets/sprite.png);
+  background-position: -170px -195px;
+  transform: scale(0.6);
+  width: 70px;
+  height: 66px;
+  position: relative;
+  left: 55vw;
+  top: -10vw;
+}
+#final .logo {
+  top: -20vw;
+}
+#final .date {
+  top: -5vw;
+}
+#final .line1 {
+  top: -23vw;
+}
+#final .line2 {
+  top: -18vw;
 }
 @keyframes fadeIn {
   0% {

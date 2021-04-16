@@ -4,7 +4,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: -10;
+  z-index: -97;
 }
 .BG .baseColor {
   position: fixed;
@@ -28,11 +28,11 @@
 @keyframes bgmove {
   0% {
     transform: scale(0.5) translate(-1300px, -1700px);
-    opacity: 0.8;
+    opacity: 0.9;
   }
   25% {
     transform: scale(0.5) translate(-3000px, -3300px);
-    opacity: 0.7;
+    opacity: 0.8;
   }
   50% {
     transform: scale(0.5) translate(-1300px, -3300px);
@@ -40,6 +40,6 @@
   }
   100% {
     transform: scale(0.5) translate(-3000px, -1700px);
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }

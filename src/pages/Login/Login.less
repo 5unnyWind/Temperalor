@@ -1,6 +1,6 @@
 // 主题色(主要的字体颜色)
-@themeColor:#9C8FAE;
-@themeColorLight:#635D5D;
+@themeColor:#D3D3D3;
+@themeColorLight:#494949;
 // 背景色
 @bgColor:#2A2626;
 
@@ -21,8 +21,10 @@
 
   // 忘记密码
   .forget{
-    margin-left: 70vw;
-    margin-top: 6vh;
+    margin-left: 68vw;
+    position: relative;
+    top: -10vh;
+    // margin-top: 6vh;
     font-size: 1.3rem;
   }
   
@@ -33,7 +35,7 @@
       font-size: 2.77rem;
       font-weight: 600;
       color: @themeColor;
-      margin-top: 6vh;
+      margin-top: 12vh;
       margin-left: 4vw;
 
     }
@@ -68,7 +70,6 @@
     // 下划线动效
     .underline{
       position: absolute;
-      
       display: block;
       width: 90vw;
       height: 2px;
@@ -85,8 +86,8 @@
     .protocol{
       color: #AFADAD;
       font-size: 1rem;
-      text-align: center;
-      margin: 5vh auto;
+      // text-align: center;
+      margin: 5vh ;
       .protocolText{
         color: @themeColor;
       }
@@ -107,7 +108,7 @@
   // 第三方登录
   .otherLogin{
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
 
     label{
       width: 26vw;
@@ -126,7 +127,9 @@
       background-position: -6px -90px;
       width: 90px;
       height: 90px;
-      margin: 0 auto;
+      // margin: 0 auto;
+      position: relative;
+      left: -10vw;
       transform: scale(.6);
       display: inline-block;
     }
@@ -135,7 +138,9 @@
       background-position: -92px -90px;
       width: 90px;
       height: 90px;
-      margin: 0 auto;
+      // margin: 0 auto;
+      position: relative;
+      right: -10vw;
       transform: scale(.6);
       display: inline-block;
       

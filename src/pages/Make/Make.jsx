@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PubSub from 'pubsub-js'
+// import PubSub from 'pubsub-js'
 import './make.css'
 
 class Make extends Component {
@@ -358,22 +358,20 @@ class Make extends Component {
           <div className="q0" id='center'>
             <p>&nbsp;</p>
             <p>Q0:</p>
-            <p>回想今天心情温度是？</p>
+            <p>回想今天心情温度区间是？</p>
 
             <label>
               <input type="radio" name='a0' />
-              option1:暖
+              20-30℃
             </label>
             <br />
 
             <label>
               <input type="radio" name='a0' />
-            option2:冷
+            10-20℃
             </label>
             <br />
-
-
-            <br />
+            <p>（后续问题温度代表程度）</p>
             <button onClick={this.clickQ0} className='qabtn'>确定</button>
           </div>
 

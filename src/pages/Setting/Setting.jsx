@@ -10,7 +10,7 @@ export default class Setting extends Component {
 
   // 点击注销按钮
   logout=()=>{
-    this.props.history.push("/login")
+    this.props.history.replace("/login")
   }
 
   render() {
@@ -32,7 +32,7 @@ export default class Setting extends Component {
         {/* 用户名/头像 */}
         <div className="info">
           <p>用户名</p>
-          <p>xxxxxxxx</p>
+          <p>SunnyWind</p>
         </div>
 
         {/* 信息列表 */}
