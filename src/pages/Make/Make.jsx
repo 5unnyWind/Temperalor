@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { toast } from 'react-toastify';
 // import PubSub from 'pubsub-js'
 import './make.css'
 
@@ -43,7 +44,7 @@ class Make extends Component {
       // PubSub.publish('tonal', 'cold')
       this.setState({tonal:'cold'})
     } else {
-      alert("请选择")
+      toast.dark("请选择")
     }
   }
 
@@ -63,7 +64,7 @@ class Make extends Component {
       // PubSub.publish('red', 0.2)
       this.setState({red:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector(".q1").id = "right"
@@ -83,7 +84,7 @@ class Make extends Component {
       // PubSub.publish('orange', 0.2)
       this.setState({orange:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector(".q2").id = 'right'
@@ -103,7 +104,7 @@ class Make extends Component {
       // PubSub.publish('yellow', 0.2)
       this.setState({yellow:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector('.q3').id = 'right'
@@ -123,7 +124,7 @@ class Make extends Component {
       // PubSub.publish('green', 0.2)
       this.setState({green:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector('.q4').id = 'right'
@@ -143,7 +144,7 @@ class Make extends Component {
       // PubSub.publish('blue', 0.2)
       this.setState({blue:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector('.q5').id = 'right'
@@ -163,7 +164,7 @@ class Make extends Component {
       // PubSub.publish('purple', 0.2)
       this.setState({purple:0.2})
     } else {
-      alert('请选择')
+      toast.dark('请选择')
       return false
     }
     document.querySelector('.q6').id = 'right'
@@ -387,3 +388,27 @@ class Make extends Component {
 }
 
 export default Make;
+
+
+
+
+/*
+暖
+aaa:#E1B97B
+aab:#E2B07E
+aac:#E0A681
+aba:
+acb:#DCAE85
+bba:#E0BE82
+cbc:#E3BF9E
+ccc:#E3C6AE
+
+冷
+bbc:#9FB7C5
+cbc:#A3B7C9
+bbb;#98A9BC
+cba:#919BB1
+baa:#8796B0
+abc:#9CB4C1
+
+ */

@@ -104,7 +104,7 @@ class Save extends Component {
 
     return (
       
-      <div>
+      <div id='postPage'>
         {/* 海报 */}
         <div className='posterPage'>
           
@@ -116,7 +116,7 @@ class Save extends Component {
 
             <div className="sekabox">
               <p id='todayTem'>今日情绪温度</p>
-              <p className="colorCode">#8595AE</p>
+              <p className="colorCode">#9CB4C1</p>
               {/* 传统艺能：拼串 */}
               <div className="seka" style={{ backgroundColor: seka1 }}></div>
               <div className="seka2" style={{ backgroundColor: seka2 }}></div>

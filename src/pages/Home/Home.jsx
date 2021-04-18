@@ -14,12 +14,12 @@ export default class Home extends Component {
         "username": sessionStorage.getItem('username'),
         "password": sessionStorage.getItem('password')
       }
-    )).then(async res=>{
+    )).then(async res => {
 
       // 存Token
-      sessionStorage.setItem('Token',res.data.Token)
+      sessionStorage.setItem('Token', res.data.Token)
       // 存密文密码
-      sessionStorage.setItem('encryption',res.data.Data.password)
+      sessionStorage.setItem('encryption', res.data.Data.password)
 
       await axios({
         method: 'post',
@@ -27,17 +27,17 @@ export default class Home extends Component {
         // responseType: 'blob',
         headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('Token') }
       }).then(res => {
-       console.log(res)
-       //存oss所需数据
-       sessionStorage.setItem("access_key_id",res.data.access_key_id)
-       sessionStorage.setItem("access_key_secret",res.data.access_key_secret)
-       sessionStorage.setItem("security_token",res.data.security_token)
-      }).catch(err=>{
+        //  console.log(res)
+        //存oss所需数据
+        sessionStorage.setItem("access_key_id", res.data.access_key_id)
+        sessionStorage.setItem("access_key_secret", res.data.access_key_secret)
+        sessionStorage.setItem("security_token", res.data.security_token)
+      }).catch(err => {
         console.log(err)
       })
 
 
-    }).catch(err=>{
+    }).catch(err => {
       console.log(err)
     })
   }
@@ -50,6 +50,12 @@ export default class Home extends Component {
   // 点击右下角按钮，邂逅温度
   encounter = () => {
     this.props.history.push("/encounter")
+    //随机获取他人分享的图片
+    axios.get('http://121.196.103.173:8080/temp/rand_picture')
+      .then(res => {
+        console.log(res.data.Data)
+        sessionStorage.setItem('postcardUrl', res.data.Data)
+      })
   }
   // 点击左下角按钮，制作色卡
   make = () => {

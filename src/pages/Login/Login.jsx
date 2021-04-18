@@ -26,23 +26,23 @@ export default class Login extends Component {
   }
 
   //点击忘记密码
-  forget=()=>{
+  forget = () => {
     toast.dark('请qq联系2660796265找回密码')
   }
 
 
   // 点击用户协议
-  protocol=()=>{
+  protocol = () => {
     toast.dark('')
   }
 
 
   // 点击qq登录
-  qqlogin=()=>{
+  qqlogin = () => {
     toast.dark('qq登录暂未接入，第三方互通平台正在审核')
   }
   // 点击微信登录
-  wxlogin=()=>{
+  wxlogin = () => {
     toast.dark('微信登录暂未接入，第三方互通平台正在审核')
   }
 
@@ -100,7 +100,11 @@ export default class Login extends Component {
       }, 4000)
 
     }).catch(err => {
-
+      console.log(err.response)
+      if (err.response === undefined) {
+        toast.dark('网络错误')
+        return false
+      }
       // 1003用户不存在，自动注册
       if (err.response.data.Status === 1003) {
         PubSub.publish("login", true)
@@ -197,16 +201,16 @@ export default class Login extends Component {
             <p>注册/登录即表示已阅读并同意</p>
             {/* eslint-disable-next-line */}
             <p
-            onClick={this.protocol} 
-            className={"protocolText " + className}>《用户协议与隐私政策》</p>
+              onClick={this.protocol}
+              className={"protocolText " + className}>《用户协议与隐私政策》</p>
           </div>
 
 
           {/* 忘记密码 */}
-          
+
           <div
-          onClick={this.forget} 
-          className={"forget " + className}>忘记密码?</div>
+            onClick={this.forget}
+            className={"forget " + className}>忘记密码?</div>
 
 
           {/* 确定登录/注册按钮,想变形 */}
@@ -227,12 +231,12 @@ export default class Login extends Component {
             <label></label>
           </div>
           <div
-          onClick={this.qqlogin} 
-          className="qq" ></div>
+            onClick={this.qqlogin}
+            className="qq" ></div>
 
           <div
-          onClick={this.wxlogin} 
-          className="wechat"></div>
+            onClick={this.wxlogin}
+            className="wechat"></div>
 
         </div>
 
