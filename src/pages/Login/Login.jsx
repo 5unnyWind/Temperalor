@@ -12,7 +12,8 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 export default class Login extends Component {
   state = {
-    className: ""
+    className: "",
+    egg:0
   }
   username = React.createRef()
   password = React.createRef()
@@ -65,12 +66,34 @@ export default class Login extends Component {
 
   // 点击登录按钮
   login = () => {
+    const {egg}=this.state
     // 获取账号密码
     const username = this.username.current.value
     const password = this.password.current.value
     // 检验密码格式
     if (username.trim() === '') {
       toast.dark('请输入用户名')
+      
+      this.setState({egg:egg+1})
+      if(egg===5){
+        const toastSet={
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          }
+        toast('🦄 后端--郭芳泉！', toastSet);
+        toast('🦄 后端--郑昕悦！', toastSet);
+        toast('🦄 设计--赵梓馨！', toastSet);
+        toast('🦄 运营--安嘉琪！', toastSet);
+        toast('🦄 运营--刘佳欣！', toastSet);
+        toast('🦄 产品--马玮奇！', toastSet);
+        toast('🦄 鼓励师--郭晋瑜！', toastSet);
+        toast('🦄 前端--覃天凤！', toastSet);
+      }
       return false
     } else
       if (password.trim().length < 8) {
