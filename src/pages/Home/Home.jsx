@@ -53,7 +53,7 @@ export default class Home extends Component {
     //随机获取他人分享的图片
     axios.get('http://121.196.103.173:8080/temp/rand_picture')
       .then(res => {
-        console.log(res.data.Data)
+        // console.log(res.data.Data)
         sessionStorage.setItem('postcardUrl', res.data.Data)
       })
   }
