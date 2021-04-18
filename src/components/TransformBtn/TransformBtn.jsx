@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import PubSub from 'pubsub-js'
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './transformBtn.css'
 
 const delay = (ms) => {
@@ -17,7 +19,7 @@ class TransformBtn extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
     this.setState({ className: this.props.className })
     this.setState({ children: this.props.children })
   }
@@ -51,18 +53,19 @@ class TransformBtn extends Component {
   //   // }
   // }
 
-    // 点击按钮
-    _handleClick = async (e) => {
+  // 点击按钮
+  _handleClick = async (e) => {
+    if (sessionStorage.getItem('ok') === "yes") {
+
       // 接收登录是否成功的信息
       PubSub.subscribe("login", (_, s) => {
         this.setState({ success: s })
       })
-  
-      console.log(e.target.className)
+
+      // console.log(e.target.className)
       // 让按钮变形：加载形态
       this.setState({ className: "loding" })
       this.setState({ children: "" })
-
       await delay(2500)
       if (this.state.success) {
         // 让按钮变形：成功形态
@@ -72,18 +75,26 @@ class TransformBtn extends Component {
         this.setState({ className: "end" })
       } else {
         // 让按钮变形：失败形态
-        this.setState({ className: "fail" })
+        this.setState({ className: "loginBtn" })
+        this.setState({ children: this.props.children })
+        toast.dark('登录失败')
+        // console.log(this.state)
       }
-      // if (e.target.className==="loginBtn"){
-      //   this.props.history.replace("/home")
-      // }
-
     }
+
+
+
+    // if (e.target.className==="loginBtn"){
+    //   this.props.history.replace("/home")
+    // }
+
+  }
 
   render() {
     const { className, children } = this.state
     return (
-      <div className={className} onClick={(res) => this._handleClick(res)}>
+      <div className={className}
+        onClick={(res) => this._handleClick(res)}>
         {children}
         <span className="d1"></span>
         <span className="d2"></span>
@@ -91,6 +102,7 @@ class TransformBtn extends Component {
         <svg>
           <polyline fill="none" stroke="#D3D3D3" strokeWidth="2" points="9,15 15,25 28,9" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
+
       </div>
     )
   }

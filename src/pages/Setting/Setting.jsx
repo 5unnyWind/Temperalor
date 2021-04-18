@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import './setting.css'
 
+
 export default class Setting extends Component {
+
+
 
   // 点击返回
   back=()=>{
@@ -10,6 +13,9 @@ export default class Setting extends Component {
 
   // 点击注销按钮
   logout=()=>{
+    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('password')
+    sessionStorage.setItem('ok',false)
     this.props.history.replace("/login")
   }
 
@@ -32,7 +38,7 @@ export default class Setting extends Component {
         {/* 用户名/头像 */}
         <div className="info">
           <p>用户名</p>
-          <p>SunnyWind</p>
+          <p>{sessionStorage.getItem('username')}</p>
         </div>
 
         {/* 信息列表 */}

@@ -1,19 +1,58 @@
+import axios from 'axios'
 import React, { Component } from 'react'
 import Calendar from '../../components/Calendar/Calendar'
 
 import './home.css'
 
 export default class Home extends Component {
+
+
+  componentDidMount() {
+
+    axios.post('http://121.196.103.173:8080/user/login', JSON.stringify(
+      {
+        "username": "SunnyWind",
+        "password": "112233445"
+      }
+    )).then(async res=>{
+
+      // 存Token
+      sessionStorage.setItem('Token',res.data.Token)
+      // 存密文密码
+      sessionStorage.setItem('password',res.data.Data.password)
+
+      await axios({
+        method: 'post',
+        url: 'http://121.196.103.173:8080/temp/token',
+        // responseType: 'blob',
+        headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('Token') }
+      }).then(res => {
+       console.log(res)
+       //存oss所需数据
+       sessionStorage.setItem("access_key_id",res.data.access_key_id)
+       sessionStorage.setItem("access_key_secret",res.data.access_key_secret)
+       sessionStorage.setItem("security_token",res.data.security_token)
+      }).catch(err=>{
+        console.log(err)
+      })
+
+
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
+
+
   // 点击左上角设置按钮
   set = () => {
     this.props.history.push("/setting")
   }
   // 点击右下角按钮，邂逅温度
-  encounter=()=>{
+  encounter = () => {
     this.props.history.push("/encounter")
   }
   // 点击左下角按钮，制作色卡
-  make=()=>{
+  make = () => {
     this.props.history.push("/make")
   }
 
@@ -35,7 +74,7 @@ export default class Home extends Component {
 
         {/* 中部日历 */}
         <div className="calendar">
-          <Calendar/>
+          <Calendar />
         </div>
 
 
@@ -44,12 +83,12 @@ export default class Home extends Component {
 
           {/* 左下按钮 */}
           <button className="lbBtn" onClick={this.make}>
-            {/* 邂逅温度 */}
+            {/* 生成色卡 */}
           </button>
 
-          {/* 右下按钮 */}
+          {/* 左下按钮 */}
           <button className="rbBtn" onClick={this.encounter}>
-            {/* 制作色卡 */}
+            {/* 邂逅温度 */}
           </button>
         </div>
 

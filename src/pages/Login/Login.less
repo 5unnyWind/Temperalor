@@ -18,6 +18,8 @@
 
 // 登录页盒子
 .loginPage{
+  font-family: '苹方-简';
+  animation: fadeIn .5s;
 
   // 忘记密码
   .forget{
@@ -37,6 +39,7 @@
       color: @themeColor;
       margin-top: 12vh;
       margin-left: 4vw;
+      
 
     }
     .user{
@@ -166,12 +169,15 @@
 
 
 // 动画
-// 淡出
-@keyframes fadeOut {
-  0%{
-    opacity: 0.99;
+// 淡入淡出
+@keyframes fadeIn {
+  from{
+    opacity: 0;
   }
-  100%{
+}
+@keyframes fadeOut {
+
+  to{
     opacity: 0;
   }
 }

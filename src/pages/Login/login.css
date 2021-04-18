@@ -1,3 +1,7 @@
+.loginPage {
+  font-family: '苹方-简';
+  animation: fadeIn 0.5s;
+}
 .loginPage .forget {
   margin-left: 68vw;
   position: relative;
@@ -111,11 +115,13 @@
 .fade {
   animation: fadeOut 1s forwards;
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 0.99;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
+}
+@keyframes fadeOut {
+  to {
     opacity: 0;
   }
 }

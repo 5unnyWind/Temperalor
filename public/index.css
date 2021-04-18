@@ -7,6 +7,17 @@
   transition: all .3s;
  }
 
+ /* 自定义字体 */
+ @font-face{
+   font-family: 'Argmansc';
+   src: url('assets/Argmansc.ttf')format('truetype');
+ }
+ @font-face{
+   font-family: '苹方-简';
+   src: url('assets/PingFang/Light.ttf')format('truetype');
+ }
+ 
+
  /* 媒体查询，适配移动端 */
 @media screen and (min-width:320px){
   html{

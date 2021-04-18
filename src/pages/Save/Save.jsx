@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PubSub from 'pubsub-js'
 import './save.css'
+import { toast } from 'react-toastify';
 class Save extends Component {
   state={
     year:'',
@@ -33,7 +34,7 @@ class Save extends Component {
   produce=()=>{
     const story= document.querySelector('#story').value
     if(story===''){
-      alert('还没输入内容哦')
+      toast.dark('还没输入内容哦')
       return false
     }else{
       PubSub.publish('story',story)
@@ -115,7 +116,7 @@ class Save extends Component {
 
             <div className="sekabox">
               <p id='todayTem'>今日情绪温度</p>
-              <p className="colorCode">#E2B98C</p>
+              <p className="colorCode">#8595AE</p>
               {/* 传统艺能：拼串 */}
               <div className="seka" style={{ backgroundColor: seka1 }}></div>
               <div className="seka2" style={{ backgroundColor: seka2 }}></div>
