@@ -77,7 +77,7 @@ class TransformBtn extends Component {
         // 让按钮变形：失败形态
         this.setState({ className: "loginBtn" })
         this.setState({ children: this.props.children })
-        toast.dark('登录失败')
+        toast.dark('登录失败,密码错误或连接失败')
         // console.log(this.state)
       }
     }

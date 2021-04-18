@@ -38,6 +38,9 @@
 .calendar #calendar-year {
   display: inline-block;
 }
+.body {
+  margin-top: -30px;
+}
 .body-list ul {
   width: 100%;
   font-family: arial;
@@ -46,8 +49,8 @@
 }
 .body-list ul li {
   width: 14.28%;
-  height: 36px;
-  line-height: 36px;
+  height: 37px;
+  line-height: 37px;
   list-style-type: none;
   display: block;
   box-sizing: border-box;
@@ -60,11 +63,9 @@
 }
 .darkgrey {
   color: #ffffff;
-  /*深灰色*/
 }
 .green {
   color: #6ac13c;
-  /*绿色*/
 }
 .greenbox {
   border: 1px solid #6ac13c;

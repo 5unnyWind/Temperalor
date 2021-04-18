@@ -19,19 +19,34 @@
   transform: scale(0.5) translate(-1300px, -1700px);
   animation: bgmove 100s infinite alternate linear;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
   .BG img {
     transform: scale(1);
     animation: none;
   }
 }
+.pc {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .pc {
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    color: red;
+    background-color: black;
+    z-index: 9;
+    font-size: 20px;
+    text-align: center;
+  }
+}
 @keyframes bgmove {
   0% {
     transform: scale(0.5) translate(-1300px, -1700px);
-    opacity: 0.9;
+    opacity: 1;
   }
   25% {
-    transform: scale(0.5) translate(-3000px, -3300px);
+    transform: scale(0.5) translate(-2500px, -3300px);
     opacity: 0.8;
   }
   50% {
@@ -39,7 +54,7 @@
     opacity: 0.9;
   }
   100% {
-    transform: scale(0.5) translate(-3000px, -1700px);
+    transform: scale(0.5) translate(-2500px, -1700px);
     opacity: 0.8;
   }
 }

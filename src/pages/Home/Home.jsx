@@ -11,15 +11,15 @@ export default class Home extends Component {
 
     axios.post('http://121.196.103.173:8080/user/login', JSON.stringify(
       {
-        "username": "SunnyWind",
-        "password": "112233445"
+        "username": sessionStorage.getItem('username'),
+        "password": sessionStorage.getItem('password')
       }
     )).then(async res=>{
 
       // 存Token
       sessionStorage.setItem('Token',res.data.Token)
       // 存密文密码
-      sessionStorage.setItem('password',res.data.Data.password)
+      sessionStorage.setItem('encryption',res.data.Data.password)
 
       await axios({
         method: 'post',

@@ -5,8 +5,9 @@ class BG extends Component {
   render() {
     return (
       <div className="BG">
+        <div className="pc">请使用手机或屏幕尺寸类似的设备以获得最佳体验，pc页面正在开发中...</div>
         <div className="baseColor"></div>
-        <img src="assets/bg.png" alt=""/>
+        <img src="assets/bg.png" alt="背景"/>
       </div>
     );
   }
